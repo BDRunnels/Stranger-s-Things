@@ -62,6 +62,8 @@ body {
     background-color: whitesmoke;
     margin: 1%;
     margin-left: 25vw;
+    /* box-shadow: 5px 5px 5px 2px black; */
+    /* border-radius: 15%; */
     
     
 }
@@ -78,6 +80,8 @@ body {
     padding-left: 5%;
     padding-right: 5%;
     background-color: whitesmoke;
+    /* box-shadow: 5px 5px 5px 2px rgb(150, 35, 35); */
+    /* border-radius: 15%; */
 
 }
 
@@ -131,4 +135,30 @@ div a {
 .ok {
     display: flex;
     justify-content: flex-start;
+}
+
+#searchBar, .makePostInput {
+    display: flex;
+    align-items: center;
+    border: 2px solid black;
+    width: auto;
+    height:auto;
+    font-size: 20px;
+}
+
+#makePostFlex {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    
+}
+
+.makePostInput {
+    margin: 2%;
+}
+
+.messageSender {
+    display:flex;
+    justify-content: center;
 }

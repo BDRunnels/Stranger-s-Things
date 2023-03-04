@@ -1,6 +1,10 @@
 import { Link } from "react-router-dom";
+import { useState } from "react";
 
 const Header = (props) => {
+    
+
+
     return (
         <div>
             <header id="headerFlex">
@@ -30,7 +34,7 @@ const Header = (props) => {
                 </nav>
                 <h1> Stranger's Things & Stuff </h1>
             </header>
-            <input type="text" placeholder="Search For Posts"/>
+           
         </div>
     )
 }
