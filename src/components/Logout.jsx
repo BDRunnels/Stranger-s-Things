@@ -14,7 +14,8 @@ const Logout = (props) => {
 
     return (
         <div>
-            <h1 id="logoutH1"> You have succesfully logged out. Thank you for visiting. </h1>
+            
+            <h1 id="logoutH1"> You have succesfully logged out.  </h1>
             <h2 id="logoutH2"> Please visit 'Home' to see all posts or 'Account' to login again.</h2>
         </div>
     )

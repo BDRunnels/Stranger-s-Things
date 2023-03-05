@@ -42,35 +42,35 @@ const Main = () => {
         fetchPosts();
     }, []);
 
-    useEffect(() => {
-        if (localStorage.getItem("token")) {
-            setIsLoggedIn(true)
-            console.log(localStorage.getItem("token"))
-            fetchData();
-        } else {
-            setIsLoggedIn(false)
-            console.log("No Token!")
-        }
-    }, [])
+    // useEffect(() => {
+    //     if (localStorage.getItem("token")) {
+    //         setIsLoggedIn(true)
+    //         console.log(localStorage.getItem("token"))
+    //         fetchData();
+    //     } else {
+    //         setIsLoggedIn(false)
+    //         console.log("No Token!")
+    //     }
+    // }, [])
 
-        async function fetchData () {
-            try {
-                const response = await fetch(`${baseURL}/users/me`, {
-                    headers: {
-                        "Content-Type": "application/json",
-                        Authorization: `Bearer ${localStorage.getItem("token")}`,
+    //     async function fetchData () {
+    //         try {
+    //             const response = await fetch(`${baseURL}/users/me`, {
+    //                 headers: {
+    //                     "Content-Type": "application/json",
+    //                     Authorization: `Bearer ${localStorage.getItem("token")}`,
                         
-                    }
-                });
+    //                 }
+    //             });
 
-                const translatedData = await response.json();
-                console.log("Below is our data:")
-                console.log(translatedData)
-                setUserData(translatedData.data);
-            } catch (e) {
-                console.log(e)
-            }
-        }
+    //             const translatedData = await response.json();
+    //             console.log("Below is our data:")
+    //             console.log(translatedData)
+    //             setUserData(translatedData.data);
+    //         } catch (e) {
+    //             console.log(e)
+    //         }
+    //     }
    
    
 

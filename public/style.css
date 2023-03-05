@@ -180,3 +180,11 @@ div a {
     display:flex;
     justify-content: center;
 }
+
+#logoutH2 {
+    /* border: 2px solid black; */
+    float: left;
+    width: 100%;
+    text-align: center;
+}
+
