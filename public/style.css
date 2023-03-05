@@ -23,6 +23,24 @@
     background-color: lightslategray;
 }
 
+#footerFlex {
+    justify-content: space-evenly;
+    /* padding: 2%; */
+    width: 100%;
+    height: 8vh;
+    border: 6px groove black;
+    left: 0;
+    bottom: 0;
+    position: fixed;
+    background-color: lightslategray;
+}
+
+#footerFlex h1 {
+    float:left;
+    margin-left: 10%;
+    font-size: smaller;
+}
+
 h1 {
     
     float: right;

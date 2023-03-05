@@ -1,7 +1,7 @@
 import { createRoot } from "react-dom/client";
 import { useState, useEffect } from "react";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
-import { AllPosts, SinglePost, Header, CreateAccount, Profile, Login, Logout, MakePost } from "./components";
+import { AllPosts, SinglePost, Header, CreateAccount, Profile, Login, Logout, MakePost, Footer } from "./components";
 
 const Main = () => {
     const [allPosts, setAllPosts] = useState([]);
@@ -89,7 +89,7 @@ const Main = () => {
                 <Route path="/logout" element={<Logout isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />} />
                 <Route path="/newpost" element={<MakePost allPosts={allPosts} setAllPosts={setAllPosts}/>}/>
             </Routes>
-            
+            <Footer/>
         </BrowserRouter>
     )
 }
