@@ -32,7 +32,7 @@ const SinglePost = (props) => { //WILL BE INDIVIDUAL POST DETAILS OF PICTURE, DE
                 },
                 body: JSON.stringify({
                     message: {
-                        content: sendMessage,
+                    content: sendMessage,
                     }
                 })
             });

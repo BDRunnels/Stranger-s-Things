@@ -26,7 +26,8 @@ const CreateAccount = () => {
             const response = await fetch(`${baseURL}/users/register`, {
                 method: "POST",
                 headers: {
-                    "Content-type": "application/JSON"
+                    "Content-type": "application/JSON",
+                    
                 },
                 body: JSON.stringify({
                     user: {
