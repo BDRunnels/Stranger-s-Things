@@ -51,7 +51,7 @@ const Main = () => {
             setIsLoggedIn(false)
             console.log("No Token!")
         }
-    
+    }, [])
 
         async function fetchData () {
             try {
@@ -71,7 +71,7 @@ const Main = () => {
                 console.log(e)
             }
         }
-    }, [])
+   
    
 
     
