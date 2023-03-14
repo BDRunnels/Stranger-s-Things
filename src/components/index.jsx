@@ -8,3 +8,4 @@ export { default as Login } from "./Login";
 export { default as Logout } from "./Logout";
 export { default as MakePost } from "./MakePost";
 export { default as Footer } from "./Footer";
+export { default as Messages } from "./Messages";

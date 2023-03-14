@@ -4,8 +4,7 @@ import { Link } from "react-router-dom";
 const Profile = (props) => {
     
     const [userData, setUserData] = useState({});
-    const [newPost, setNewPost] = useState("");
-
+    
     const cohortName = "2301-FTB-MT-WEB-FT";
     const baseURL = `https://strangers-things.herokuapp.com/api/${cohortName}`;
 
@@ -41,7 +40,7 @@ const Profile = (props) => {
     }, [])
    
     
-  
+    console.log(userData)
 
     
     return (
@@ -55,24 +54,38 @@ const Profile = (props) => {
                     <Link to="/newpost" style={{border: "2px solid black", backgroundColor: "white", marginTop: "2%"}}> Make a New Post </Link>
                     <div id="profilePostFlex"> 
                     
-                        <h3> Posts by: {userData.username}</h3>
-                        {/* <h2> {props.userData.data.posts}</h2> */}
-                        {/* {
-                            props.userData.posts.map((mySinglePost) => {
+                        <h2> Posts by: {userData.username}</h2>
+                        {
+                            
+                            userData.posts ? 
+                            userData.posts.map((mySinglePost) => {
                             return (
-                                <div key={mySinglePost._id} id="profilePostFlex">
+                                <div key={mySinglePost._id} id="indPostFlex">
                                     
                                     <h2> <u>"{mySinglePost.title}"</u></h2>
                                     <h3> {mySinglePost.description}</h3>
                                     <h3> Price: ${mySinglePost.price}</h3>
-                                    <h3> Available location: {mySinglePost.location}</h3>
-                                    <h3> Messages about the post: {mySinglePost.messages}</h3>
+                                    <h3 style={{borderBottom: "2px solid black", paddingBottom: "2%"}}> Available location: {mySinglePost.location}</h3>
+                                    {/* <h3> Messages about the post: {mySinglePost.messages}</h3> */}
+                                    {
+                                        mySinglePost.messages ?
+                                        <button><Link to={`/profile/${mySinglePost._id}`}> Messages About This Post Here </Link> </button> : <h3> No data</h3>
+                                        // mySinglePost.messages.map((singleMessage, index) => {
+                                        //     return (
+                                        //         <div key={index}>
+                                        //             <h4> Message from user: {singleMessage.fromUser.username}</h4>
+                                        //             <h4> Content: {singleMessage.content}</h4>
+                                        //         </div>
+                                        //     )
+                                        // }) : <h3> No data</h3>
+                                    } 
 
                                 </div>
                                 )
-                         }) 
+                         }) : <p> no data </p>
 
-                        } */}
+                        }
+                        
 
                     </div>
                 </section>
